@@ -1,0 +1,17 @@
+<%= form_with(model: blocked_date) do |form| %>
+  <% if blocked_date.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blocked_date.errors.count, "error") %> prohibited this blocked_date from being saved:</h2>
+
+      <ul>
+        <% blocked_date.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

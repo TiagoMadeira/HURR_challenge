@@ -1,0 +1,7 @@
+<h1>Schedule your dates</h1>
+
+<%= content_tag :div, '', id: 'blocked_dates', data: { source: @user_blocked_dates } %>
+<%= form_with url: add_blocked_dates_to_user_path, method: :post do |form| %>
+  <%= form.text_field :datepicker %>
+  <%= form.submit "Pick Dates" %>
+<% end %>
